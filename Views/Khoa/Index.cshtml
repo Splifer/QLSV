@@ -1,0 +1,12 @@
+﻿@model IEnumerable<QLSV.Models.Khoa>
+
+@{
+    ViewData["Title"] = "Khoa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<form class="col-6 mb-3" id="search" action="/Khoa/Index" >
+    <input type="text" class="form-control" id="textSearch" name="textSearch" value="@ViewData["Search"]" placeholder="Search here...">
+</form>*@
+
+<partial name="~/Views/Partial/Khoa/_PartialKhoa.cshtml" model="@Model" />

@@ -1,0 +1,14 @@
+﻿@model QLSV.Areas.Admin.Data.DataHome
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Admin</h1>
+
+@{
+    Html.RenderPartial("_PartialKhoa", Model.DanhSachKhoa);
+    Html.RenderPartial("_PartialSinhVien", Model.DanhSachKhoa);
+    Html.RenderPartial("_PartialGiangVien", Model.DanhSachKhoa);
+}

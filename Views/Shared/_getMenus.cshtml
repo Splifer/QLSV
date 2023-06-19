@@ -1,0 +1,15 @@
+﻿@model IEnumerable<QLSV.Models.Khoa>
+
+<form class="col-6 d-flex gap-2" action="/GiangVien/Index">
+    <select class="form-select" aria-label="Chọn khoa" id="chonkhoa" name="chonkhoa">
+        <option>Chọn khoa</option>
+        @if(Model != null)
+        {
+            foreach(var menu in Model)
+            {
+                <option value="@menu.MaKhoa">@menu.TenKhoa</option>
+            }
+        }
+    </select>
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>

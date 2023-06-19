@@ -1,0 +1,41 @@
+﻿@model QLSV.Models.Khoa
+
+@{
+    ViewData["Title"] = "Them";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="d-flex justify-content-center">
+    <div class="col-6 px-5 pt-5 border rounded-3 shadow-lg">
+        <h2 class="text-center fw-bold pb-4">Thêm thông tin khoa</h2>
+        <hr />
+        <form action="/quan-ly-khoa/them-khoa" method="post">
+            <div class="mb-4">
+                <label asp-for="MaKhoa" class="form-label fw-bolder">Mã Khoa</label>
+                <input asp-for="MaKhoa" type="text" class="form-control" id="makhoa" value="" aria-describedby="text">
+                <span asp-validation-for="MaKhoa" class="text-danger"></span>
+            </div>
+            <div class="mb-4">
+                <label asp-for="TenKhoa" class="form-label fw-bolder">Tên Khoa</label>
+                <input asp-for="TenKhoa" type="text" class="form-control" id="tenkhoa" value="" aria-describedby="text">
+                <span asp-validation-for="TenKhoa" class="text-danger"></span>
+            </div>
+            <div class="mb-4">
+                <label asp-for="SoDienThoai" class="form-label fw-bolder">Số điện thoại</label>
+                <input asp-for="SoDienThoai" type="number" class="form-control" id="sodienthoai" min="0" value="" aria-describedby="text">
+                <span asp-validation-for="SoDienThoai" class="text-danger"></span>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" asp-for="IsActive" id="IsActive">
+                <label class="form-check-label" asp-for="IsActive">
+                    Kích hoạt
+                </label>
+            </div>
+            <hr />
+            <div class="d-flex align-items-center justify-content-center my-5 gap-5">
+                <button type="submit" id="themgiohang" class="btn btn-primary px-4 py-2">Thêm thông tin khoa</button>
+            </div>
+        </form>
+    </div>
+</div>
+
